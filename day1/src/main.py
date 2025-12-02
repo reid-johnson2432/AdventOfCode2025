@@ -21,7 +21,7 @@ def main():
             num_zeros += 1
     print("Closing file")
     input_parser.close()
-    print(f"Number of Zeros {[num_zeros]}")
+    print(f"Number of Zeros {[dial.get_num_zeros()]}")
 
 
 if __name__ == "__main__":

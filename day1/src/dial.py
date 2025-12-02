@@ -3,6 +3,7 @@ class Dial:
     max_value = 99
     def __init__(self):
         self.position = 50
+        self.num_zeros = 0
 
     def get_position(self):
         return self.position
@@ -12,6 +13,8 @@ class Dial:
             self.position += 1
             if self.position > type(self).max_value:
                 self.position = type(self).min_value
+            if 0 == self.position:
+                self.num_zeros += 1
             distance -= 1
         return
 
@@ -20,8 +23,13 @@ class Dial:
             self.position -= 1
             if self.position < type(self).min_value:
                 self.position = type(self).max_value
+            if 0 == self.position:
+                self.num_zeros += 1
             distance -= 1
         return
+
+    def get_num_zeros(self):
+        return self.num_zeros
 
 
 if __name__ == "__main__":
