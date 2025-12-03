@@ -30,7 +30,3 @@ class Dial:
 
     def get_num_zeros(self):
         return self.num_zeros
-
-
-if __name__ == "__main__":
-    test_dial = Dial()
